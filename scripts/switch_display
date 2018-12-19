@@ -1,0 +1,14 @@
+#!/bin/bash
+#  This script uses xrandr to change monitor options
+HDMI=$(xrandr --listactivemonitors | grep 'DP-1-1' | wc -l )
+DVI=$(xrandr --listactivemonitors | grep 'DP-1-2' | wc -l )
+VGA=$(xrandr --listactivemonitors | grep 'DP-1-3' | wc -l )
+if [ $HDMI -eq 1 -a $VGA -eq 1 ]; then
+    xrandr --output DP-1-1 --left-of DP-1-3
+    xrandr --output eDP-1 --off
+elif [ $HDMI -eq 1 ]; then
+    xrandr --auto
+    xrandr --output eDP-1 --off
+else
+    xrandr --auto
+fi

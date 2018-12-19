@@ -1,0 +1,4 @@
+!#/bin/bash
+mv "$(xfce4-screenshooter -wo ls)" $HOME/Pictures/
+rename 's/Capture\ d’écran/screenshot/g' Pictures/*
+rename 's/-//g' Pictures/*
