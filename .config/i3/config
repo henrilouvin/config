@@ -43,10 +43,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+m focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -55,10 +55,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+m move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -67,13 +67,14 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f focus parent; fullscreen; focus child
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -93,6 +94,10 @@ bindsym $mod+q focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
+bindsym Control+Mod1+l workspace next
+bindsym Control+Mod1+h workspace prev
+bindsym Control+Shift+Mod1+l move container to workspace next
+bindsym Control+Shift+Mod1+h move container to workspace prev
 bindsym Control+Mod1+Right workspace next
 bindsym Control+Mod1+Left workspace prev
 bindsym Control+Shift+Mod1+Right move container to workspace next
@@ -124,9 +129,19 @@ bindsym $mod+Shift+agrave move container to workspace 10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Shutdown' 'shutdown -t 0' -b 'Reboot' reboot -b 'Logout' 'i3-msg exit' -b 'Lock' 'exec ~/.config/i3/lock-extra.sh'"
-bindsym Control+Shift+l exec ~/script/blur-lock
+# custom bindsyms
+mode "(l)ock (s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3" {
+        bindsym l exec ~/scripts/blur-lock; mode "default"
+        bindsym s exec i3lock && systemctl suspend; mode "default"
+        bindsym h exec i3lock && systemctl hibernate; mode "default"
+        bindsym p exec systemctl poweroff; mode "default"
+        bindsym r exec systemctl reboot; mode "default"
+        bindsym e exec --no-startup-id i3-msg exit; mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "(l)ock (s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3"
+bindsym $mod+Shift+p exec ~/scripts/switch_display
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -158,18 +173,29 @@ bindsym $mod+r mode "resize"
 bar {
         tray_output primary
         status_command i3status
+        colors {
+                urgent_workspace   #2f343a #900000 #ffffff
+        }
 }
 
-# Start network manager applet
-exec --no-startup-id nm-applet &
-exec --no-startup-id udiskie -s &
-
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod+F3 exec --no-startup-id amixer -q -D pulse sset Master 5%- #decrease sound volume
+bindsym $mod+F4 exec --no-startup-id amixer -q -D pulse sset Master 5%+ #increase sound volume
+bindsym $mod+F5 exec --no-startup-id amixer -q -D pulse sset Master toggle # mute/unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master 5%- #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+ #increase sound volume
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle # mute/unmute
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+
+# Setup urgency hints
+client.urgent #2f343a #900000 #ffffff #900000
+
+# Post-config execution calls
+exec --no-startup-id nm-applet &
+exec --no-startup-id udiskie -s &
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/greg_and_mike.jpg &
+exec --no-startup-id switch_display &
 

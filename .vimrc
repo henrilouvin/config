@@ -1,3 +1,15 @@
+"  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'neomake/neomake'
+call plug#end()
+
+" highlight common PEP errors
+highlight WhitespacePEP gui=underline cterm=underline ctermfg=red guifg=red ctermbg=red guibg=red
+match WhitespacePEP /\S\(=\|<\|>\|\!\|+\{-}\)=\S/
+match WhitespacePEP /\S=\S/
+" %s/\(\w\)\(=\|<\|>\|\!\|+\{-}\)=\(\w\)/\1 \2= \3/gc
+" 
 
 filetype plugin on
 set shellslash
@@ -45,6 +57,10 @@ autocmd BufWritePre [:] :wq
 
 map ' ' <Space>
 map Y y$
+nnoremap <C-H> :tabprevious<CR>
+nnoremap <C-L> :tabnext<CR> 
+nnorema  <C-S-H> :tabm -1<CR>
+nnorema  <C-S-L> :tabm +1<CR>
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR> 
 nnorema  <C-S-Left> :tabm -1<CR>
@@ -54,7 +70,7 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 command -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!
 
 " Highlight end of line whitespace
-highlight WhitespaceEOL ctermbg=red guibg=red
+highlight WhitespaceEOL ctermbg=red guibg=red gui=underline
 match WhitespaceEOL /\s\+$/
 
 " " LATEX
@@ -107,7 +123,7 @@ set wildmenu
 " set wildmode=list:longest,full
 
 " COMMENTS
-autocmd FileType c,cpp,java,scala let b:open_comment = '//'
+autocmd FileType c,cpp,java,scala,rust let b:open_comment = '//'
 autocmd FileType python,dockerfile   let b:open_comment = '#'
 autocmd FileType sh,conf,fstab let b:open_comment = '#'
 autocmd FileType tex let b:open_comment = '%'
