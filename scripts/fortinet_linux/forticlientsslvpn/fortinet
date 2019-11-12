@@ -1,0 +1,7 @@
+#! /bin/sh
+FORTI_DIR=.
+if [ `getconf LONG_BIT` = "64" ]; then
+	$FORTI_DIR/64bit/forticlientsslvpn
+else
+	$FORTI_DIR/32bit/forticlientsslvpn
+fi

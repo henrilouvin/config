@@ -1,0 +1,11 @@
+CURRENT_SINK=$(pacmd list-sinks | grep "\* index:" | awk '{print $3}')
+NEW_SINK=$(pacmd list-sinks | grep "  index:" | awk '{print $2}')
+
+pacmd list-sink-inputs | grep index | awk '{print $2}' | while read INPUT
+do
+echo "Moving $INPUT to $NEW_SINK"
+pacmd move-sink-input $INPUT $NEW_SINK
+done
+
+echo "Setting default sink to: $NEW_SINK"
+pacmd set-default-sink $NEW_SINK
