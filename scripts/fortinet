@@ -1,0 +1,7 @@
+#! /bin/sh
+
+if [ `getconf LONG_BIT` = "64" ]; then
+	$HOME/opt/forticlientsslvpn/64bit/forticlientsslvpn
+else
+	$HOME/opt/forticlientsslvpn/32bit/forticlientsslvpn
+fi

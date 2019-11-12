@@ -1,0 +1,88 @@
+01/11/2019 13:57:15 [19839] set the loglevel to 1
+01/11/2019 13:57:15 [19839] sslvpn connection version:4.0.2331
+01/11/2019 13:57:15 [18409] set the loglevel to 1
+01/11/2019 13:57:15 [19839] rcv cmd:0 at state[0]
+01/11/2019 13:57:15 [19839] starting ssl vpn tunnel[4.0.2331]
+01/11/2019 13:57:15 [19843] route backup START
+01/11/2019 13:57:15 [19843] route backup DONE
+01/11/2019 13:57:15 [19844] execl /local/home/hlouvin/scripts/fortinet_linux/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /local/home/hlouvin/scripts/fortinet_linux/forticlientsslvpn/64bit/./helper mobietendu-im.cea.fr 443   ...
+01/11/2019 13:57:15 [19844] trusted CA dir: /local/home/hlouvin/.fctsslvpn_trustca
+01/11/2019 13:57:15 [19844] set loglevel to 1
+01/11/2019 13:57:15 [19844] Peer's certificate is not valid. action is 1
+01/11/2019 13:57:15 [19844] peer's certificate: 
+Certificate:$    Data:$        Version: 3 (0x2)$        Serial Number: 165 (0xa5)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=FR, O=CEA, CN=CEA AC Technique 2031$        Validity$            Not Before: Sep 22 12:22:06 2016 GMT$            Not After : Sep 22 12:22:06 2021 GMT$        Subject: C=FR, O=cea, OU=Technique, CN=mobietendu-im.cea.fr$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c2:84:64:d5:75:c3:24:3b:3a:ed:d5:66:94:1b:$                    22:00:b0:85:ae:13:af:b6:c9:43:75:e3:67:e3:22:$                    60:3d:09:4d:12:09:f4:66:2f:b8:21:6c:af:0b:94:$                    c6:11:ed:26:9c:01:8d:04:43:c0:d7:17:3d:ef:e0:$                    3d:d1:9e:ba:b8:f6:ba:19:e7:19:35:9a:5c:10:66:$                    6c:ea:eb:de:08:ad:48:ce:03:09:36:8a:a5:2b:60:$                    b5:3f:b0:12:28:8d:02:d0:19:d0:b8:9a:cb:dd:ea:$                    0a:22:9a:39:de:3f:c0:59:82:71:3f:d3:49:50:4f:$                    87:83:20:c4:0e:6a:dc:d5:f0:5f:c2:cf:ab:8e:3a:$                    69:9e:c5:90:79:bb:e7:7e:4e:e9:be:0a:82:e2:b2:$                    1e:3b:e1:c1:2e:64:55:f3:55:0e:5e:1a:07:07:b4:$                    e9:f4:50:c9:07:aa:e2:04:42:59:e7:a8:e4:e6:cc:$                    cf:38:32:5b:db:f4:78:e9:a2:1d:1c:5f:3c:87:ef:$                    b0:a6:59:0c:9f:80:c9:5b:39:89:69:b3:26:b6:96:$                    ce:45:60:be:73:a2:a5:2c:dc:91:dd:5f:25:1b:78:$                    80:a5:2c:e2:5f:5e:a0:30:86:fb:55:b3:e6:82:19:$                    df:b5:f9:ff:5b:35:86:e8:8d:0f:63:98:b6:5f:b9:$                    ea:03$                Exponent: 65537 (0x10001)$        X509v3 extensions:$            X509v3 Subject Key Identifier: $                96:20:53:EB:08:5C:8D:16:0C:6F:8E:57:DB:2C:57:E1:27:E1:88:15$            X509v3 Authority Key Identifier: $                keyid:8B:F1:2E:37:E0:BE:A7:6B:ED:9E:DE:AD:85:EE:75:48:A5:47:35:4E$$            X509v3 Certificate Policies: $                Policy: 1.3.6.1.4.1.12384.1.6.8$                  CPS: http://www-igc.cea.fr/pc/$                  User Notice:$                    Organization: CEA$                    Numbers: 2, 0$                    Explicit Text: Vous devez acepter la politique de certification avant d'utiliser ce certificat, cf. www-igc.cea.fr$$            Netscape Cert Type: $                SSL Server$            X509v3 Key Usage: $                Digital Signature, Key Encipherment, Data Encipherment$            X509v3 Subject Alternative Name: $                DNS:mobietendu-im.cea.fr$            X509v3 CRL Distribution Points: $$                Full Name:$                  URI:http://crl-ac-technique.cea.fr/crl/cea_ac_technique_2031.crl$$            Netscape Comment: $                Vous devez accepter la politique de certification avant d'utiliser ce certificat, cf. www-igc.cea.fr$            Authority Information Access: $                CA Issuers - URI:http://www-igc.cea.fr/ac/cea_ac_technique_2031.cer$$    Signature Algorithm: sha256WithRSAEncryption$         57:71:8c:91:a6:5f:86:ba:02:db:05:fe:78:0b:fb:3f:a5:cf:$         e2:c1:06:a2:f4:33:df:bd:aa:fe:d4:34:bc:58:62:dd:c9:a6:$         61:64:13:7b:12:aa:cf:7a:cf:7c:cb:21:08:c9:56:1f:6f:8b:$         84:6c:74:0e:bc:e4:48:67:28:31:82:dd:f0:de:e7:d3:64:5a:$         5a:9a:f5:12:c4:6f:2d:cc:39:30:d4:67:5d:62:15:98:7a:10:$         c5:86:d4:2e:bf:91:3f:6a:6d:dc:90:2c:86:59:a1:85:83:09:$         3c:0b:d8:3f:d8:ae:e0:3c:c2:69:82:60:34:28:dd:f2:38:df:$         f7:fc:f2:a2:0e:e7:f5:17:ba:16:4b:26:06:ad:96:77:43:39:$         02:0e:24:2b:1c:f6:8f:84:6d:0f:8d:99:7a:ad:c1:03:5d:da:$         5e:6b:0d:e4:74:95:dc:3b:0c:f8:cd:75:c5:52:9d:7f:50:38:$         57:12:76:19:af:41:ee:45:c5:2a:5f:07:fe:eb:d7:54:c9:82:$         17:e3:31:6a:17:ec:cf:fe:c9:b8:76:5b:37:d6:ec:c9:f4:c2:$         e4:a3:d6:79:a3:f6:1a:e5:ed:a0:a1:93:f2:3d:89:78:0d:cb:$         b3:5b:86:5e:cc:5f:cb:ce:70:ae:70:c9:7e:40:44:f7:66:2b:$         b4:1c:f3:f3$
+01/11/2019 13:57:17 [19844] realm is enabled: 
+01/11/2019 13:57:17 [19844] no Content-Length
+01/11/2019 13:57:17 [19844] try to get cookie for the first time: 98 :  SVPNNETWORKCOOKIE=; path=/remote/network; expires=Fri, 11-Jan-2019 12:57:17 GMT; secure; httponly
+01/11/2019 13:57:17 [19844] no Content-Length
+01/11/2019 13:57:17 [19844] no SVPNCOOKIE found
+01/11/2019 13:57:17 [19839] rcv notice:1|Insufficient credential(s). Please check the password, client certificate, etc.
+01/11/2019 13:57:17 [19839] setup tunnel failed
+
+01/11/2019 13:57:17 [19839] kill_child:19844
+01/11/2019 13:57:17 [19839] tunnel start failed
+01/11/2019 13:57:17 [19851] begin cleanup linux...
+01/11/2019 13:57:17 [19851] clean up route...
+01/11/2019 13:57:17 [19851] truncate pppd.log
+01/11/2019 13:57:17 [19851] truncate forticlientsslvpn.log
+01/11/2019 13:57:17 [19844] FortiClient SSLVPN[4.0.2331] stopped
+01/11/2019 13:57:19 [19839] rcv cmd:1 at state[0]
+01/11/2019 13:57:19 [19839] rcv cmd:2 at state[0]
+01/11/2019 13:57:33 [20318] set the loglevel to 1
+01/11/2019 13:57:33 [20316] set the loglevel to 1
+01/11/2019 13:57:33 [20318] sslvpn connection version:4.0.2331
+01/11/2019 13:57:33 [20318] rcv cmd:0 at state[0]
+01/11/2019 13:57:33 [20318] starting ssl vpn tunnel[4.0.2331]
+01/11/2019 13:57:33 [20322] route backup START
+01/11/2019 13:57:33 [20322] route backup DONE
+01/11/2019 13:57:33 [20323] execl /local/home/hlouvin/scripts/fortinet_linux/forticlientsslvpn/64bit/./helper/get_fortisslvpn_info /local/home/hlouvin/scripts/fortinet_linux/forticlientsslvpn/64bit/./helper mobietendu-im.cea.fr 443   ...
+01/11/2019 13:57:33 [20323] trusted CA dir: /local/home/hlouvin/.fctsslvpn_trustca
+01/11/2019 13:57:33 [20323] set loglevel to 1
+01/11/2019 13:57:33 [20323] Peer's certificate is not valid. action is 1
+01/11/2019 13:57:33 [20323] peer's certificate: 
+Certificate:$    Data:$        Version: 3 (0x2)$        Serial Number: 165 (0xa5)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=FR, O=CEA, CN=CEA AC Technique 2031$        Validity$            Not Before: Sep 22 12:22:06 2016 GMT$            Not After : Sep 22 12:22:06 2021 GMT$        Subject: C=FR, O=cea, OU=Technique, CN=mobietendu-im.cea.fr$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c2:84:64:d5:75:c3:24:3b:3a:ed:d5:66:94:1b:$                    22:00:b0:85:ae:13:af:b6:c9:43:75:e3:67:e3:22:$                    60:3d:09:4d:12:09:f4:66:2f:b8:21:6c:af:0b:94:$                    c6:11:ed:26:9c:01:8d:04:43:c0:d7:17:3d:ef:e0:$                    3d:d1:9e:ba:b8:f6:ba:19:e7:19:35:9a:5c:10:66:$                    6c:ea:eb:de:08:ad:48:ce:03:09:36:8a:a5:2b:60:$                    b5:3f:b0:12:28:8d:02:d0:19:d0:b8:9a:cb:dd:ea:$                    0a:22:9a:39:de:3f:c0:59:82:71:3f:d3:49:50:4f:$                    87:83:20:c4:0e:6a:dc:d5:f0:5f:c2:cf:ab:8e:3a:$                    69:9e:c5:90:79:bb:e7:7e:4e:e9:be:0a:82:e2:b2:$                    1e:3b:e1:c1:2e:64:55:f3:55:0e:5e:1a:07:07:b4:$                    e9:f4:50:c9:07:aa:e2:04:42:59:e7:a8:e4:e6:cc:$                    cf:38:32:5b:db:f4:78:e9:a2:1d:1c:5f:3c:87:ef:$                    b0:a6:59:0c:9f:80:c9:5b:39:89:69:b3:26:b6:96:$                    ce:45:60:be:73:a2:a5:2c:dc:91:dd:5f:25:1b:78:$                    80:a5:2c:e2:5f:5e:a0:30:86:fb:55:b3:e6:82:19:$                    df:b5:f9:ff:5b:35:86:e8:8d:0f:63:98:b6:5f:b9:$                    ea:03$                Exponent: 65537 (0x10001)$        X509v3 extensions:$            X509v3 Subject Key Identifier: $                96:20:53:EB:08:5C:8D:16:0C:6F:8E:57:DB:2C:57:E1:27:E1:88:15$            X509v3 Authority Key Identifier: $                keyid:8B:F1:2E:37:E0:BE:A7:6B:ED:9E:DE:AD:85:EE:75:48:A5:47:35:4E$$            X509v3 Certificate Policies: $                Policy: 1.3.6.1.4.1.12384.1.6.8$                  CPS: http://www-igc.cea.fr/pc/$                  User Notice:$                    Organization: CEA$                    Numbers: 2, 0$                    Explicit Text: Vous devez acepter la politique de certification avant d'utiliser ce certificat, cf. www-igc.cea.fr$$            Netscape Cert Type: $                SSL Server$            X509v3 Key Usage: $                Digital Signature, Key Encipherment, Data Encipherment$            X509v3 Subject Alternative Name: $                DNS:mobietendu-im.cea.fr$            X509v3 CRL Distribution Points: $$                Full Name:$                  URI:http://crl-ac-technique.cea.fr/crl/cea_ac_technique_2031.crl$$            Netscape Comment: $                Vous devez accepter la politique de certification avant d'utiliser ce certificat, cf. www-igc.cea.fr$            Authority Information Access: $                CA Issuers - URI:http://www-igc.cea.fr/ac/cea_ac_technique_2031.cer$$    Signature Algorithm: sha256WithRSAEncryption$         57:71:8c:91:a6:5f:86:ba:02:db:05:fe:78:0b:fb:3f:a5:cf:$         e2:c1:06:a2:f4:33:df:bd:aa:fe:d4:34:bc:58:62:dd:c9:a6:$         61:64:13:7b:12:aa:cf:7a:cf:7c:cb:21:08:c9:56:1f:6f:8b:$         84:6c:74:0e:bc:e4:48:67:28:31:82:dd:f0:de:e7:d3:64:5a:$         5a:9a:f5:12:c4:6f:2d:cc:39:30:d4:67:5d:62:15:98:7a:10:$         c5:86:d4:2e:bf:91:3f:6a:6d:dc:90:2c:86:59:a1:85:83:09:$         3c:0b:d8:3f:d8:ae:e0:3c:c2:69:82:60:34:28:dd:f2:38:df:$         f7:fc:f2:a2:0e:e7:f5:17:ba:16:4b:26:06:ad:96:77:43:39:$         02:0e:24:2b:1c:f6:8f:84:6d:0f:8d:99:7a:ad:c1:03:5d:da:$         5e:6b:0d:e4:74:95:dc:3b:0c:f8:cd:75:c5:52:9d:7f:50:38:$         57:12:76:19:af:41:ee:45:c5:2a:5f:07:fe:eb:d7:54:c9:82:$         17:e3:31:6a:17:ec:cf:fe:c9:b8:76:5b:37:d6:ec:c9:f4:c2:$         e4:a3:d6:79:a3:f6:1a:e5:ed:a0:a1:93:f2:3d:89:78:0d:cb:$         b3:5b:86:5e:cc:5f:cb:ce:70:ae:70:c9:7e:40:44:f7:66:2b:$         b4:1c:f3:f3$
+01/11/2019 13:57:45 [20323] realm is enabled: 
+01/11/2019 13:57:45 [20323] no Content-Length
+01/11/2019 13:57:45 [20323] try to get cookie for the first time: 98 :  SVPNNETWORKCOOKIE=; path=/remote/network; expires=Fri, 11-Jan-2019 12:57:45 GMT; secure; httponly
+01/11/2019 13:57:45 [20323] no Content-Length
+01/11/2019 13:57:45 [20323] no SVPNCOOKIE found
+01/11/2019 13:57:45 [20318] rcv notice:1|Insufficient credential(s). Please check the password, client certificate, etc.
+01/11/2019 13:57:45 [20318] setup tunnel failed
+
+01/11/2019 13:57:45 [20318] kill_child:20323
+01/11/2019 13:57:45 [20318] tunnel start failed
+01/11/2019 13:57:45 [20647] begin cleanup linux...
+01/11/2019 13:57:45 [20647] clean up route...
+01/11/2019 13:57:45 [20647] truncate pppd.log
+01/11/2019 13:57:45 [20647] truncate forticlientsslvpn.log
+01/11/2019 13:57:45 [20323] FortiClient SSLVPN[4.0.2331] stopped
+01/11/2019 13:57:47 [20318] rcv cmd:1 at state[0]
+01/11/2019 13:57:47 [20318] rcv cmd:2 at state[0]
+01/11/2019 14:07:19 [4864] set the loglevel to 1
+01/11/2019 14:07:19 [4864] sslvpn connection version:4.0.2331
+01/11/2019 14:07:19 [4862] set the loglevel to 1
+01/11/2019 14:07:19 [4864] rcv cmd:0 at state[0]
+01/11/2019 14:07:19 [4864] starting ssl vpn tunnel[4.0.2331]
+01/11/2019 14:07:19 [4868] route backup START
+01/11/2019 14:07:19 [4868] route backup DONE
+01/11/2019 14:07:19 [4869] execl /local/home/hlouvin/scripts/fortinet_linux/forticlientsslvpn/./64bit/helper/get_fortisslvpn_info /local/home/hlouvin/scripts/fortinet_linux/forticlientsslvpn/./64bit/helper mobietendu-im.cea.fr 443   ...
+01/11/2019 14:07:19 [4869] trusted CA dir: /local/home/hlouvin/.fctsslvpn_trustca
+01/11/2019 14:07:19 [4869] set loglevel to 1
+01/11/2019 14:07:19 [4869] Peer's certificate is not valid. action is 1
+01/11/2019 14:07:19 [4869] peer's certificate: 
+Certificate:$    Data:$        Version: 3 (0x2)$        Serial Number: 165 (0xa5)$    Signature Algorithm: sha256WithRSAEncryption$        Issuer: C=FR, O=CEA, CN=CEA AC Technique 2031$        Validity$            Not Before: Sep 22 12:22:06 2016 GMT$            Not After : Sep 22 12:22:06 2021 GMT$        Subject: C=FR, O=cea, OU=Technique, CN=mobietendu-im.cea.fr$        Subject Public Key Info:$            Public Key Algorithm: rsaEncryption$                Public-Key: (2048 bit)$                Modulus:$                    00:c2:84:64:d5:75:c3:24:3b:3a:ed:d5:66:94:1b:$                    22:00:b0:85:ae:13:af:b6:c9:43:75:e3:67:e3:22:$                    60:3d:09:4d:12:09:f4:66:2f:b8:21:6c:af:0b:94:$                    c6:11:ed:26:9c:01:8d:04:43:c0:d7:17:3d:ef:e0:$                    3d:d1:9e:ba:b8:f6:ba:19:e7:19:35:9a:5c:10:66:$                    6c:ea:eb:de:08:ad:48:ce:03:09:36:8a:a5:2b:60:$                    b5:3f:b0:12:28:8d:02:d0:19:d0:b8:9a:cb:dd:ea:$                    0a:22:9a:39:de:3f:c0:59:82:71:3f:d3:49:50:4f:$                    87:83:20:c4:0e:6a:dc:d5:f0:5f:c2:cf:ab:8e:3a:$                    69:9e:c5:90:79:bb:e7:7e:4e:e9:be:0a:82:e2:b2:$                    1e:3b:e1:c1:2e:64:55:f3:55:0e:5e:1a:07:07:b4:$                    e9:f4:50:c9:07:aa:e2:04:42:59:e7:a8:e4:e6:cc:$                    cf:38:32:5b:db:f4:78:e9:a2:1d:1c:5f:3c:87:ef:$                    b0:a6:59:0c:9f:80:c9:5b:39:89:69:b3:26:b6:96:$                    ce:45:60:be:73:a2:a5:2c:dc:91:dd:5f:25:1b:78:$                    80:a5:2c:e2:5f:5e:a0:30:86:fb:55:b3:e6:82:19:$                    df:b5:f9:ff:5b:35:86:e8:8d:0f:63:98:b6:5f:b9:$                    ea:03$                Exponent: 65537 (0x10001)$        X509v3 extensions:$            X509v3 Subject Key Identifier: $                96:20:53:EB:08:5C:8D:16:0C:6F:8E:57:DB:2C:57:E1:27:E1:88:15$            X509v3 Authority Key Identifier: $                keyid:8B:F1:2E:37:E0:BE:A7:6B:ED:9E:DE:AD:85:EE:75:48:A5:47:35:4E$$            X509v3 Certificate Policies: $                Policy: 1.3.6.1.4.1.12384.1.6.8$                  CPS: http://www-igc.cea.fr/pc/$                  User Notice:$                    Organization: CEA$                    Numbers: 2, 0$                    Explicit Text: Vous devez acepter la politique de certification avant d'utiliser ce certificat, cf. www-igc.cea.fr$$            Netscape Cert Type: $                SSL Server$            X509v3 Key Usage: $                Digital Signature, Key Encipherment, Data Encipherment$            X509v3 Subject Alternative Name: $                DNS:mobietendu-im.cea.fr$            X509v3 CRL Distribution Points: $$                Full Name:$                  URI:http://crl-ac-technique.cea.fr/crl/cea_ac_technique_2031.crl$$            Netscape Comment: $                Vous devez accepter la politique de certification avant d'utiliser ce certificat, cf. www-igc.cea.fr$            Authority Information Access: $                CA Issuers - URI:http://www-igc.cea.fr/ac/cea_ac_technique_2031.cer$$    Signature Algorithm: sha256WithRSAEncryption$         57:71:8c:91:a6:5f:86:ba:02:db:05:fe:78:0b:fb:3f:a5:cf:$         e2:c1:06:a2:f4:33:df:bd:aa:fe:d4:34:bc:58:62:dd:c9:a6:$         61:64:13:7b:12:aa:cf:7a:cf:7c:cb:21:08:c9:56:1f:6f:8b:$         84:6c:74:0e:bc:e4:48:67:28:31:82:dd:f0:de:e7:d3:64:5a:$         5a:9a:f5:12:c4:6f:2d:cc:39:30:d4:67:5d:62:15:98:7a:10:$         c5:86:d4:2e:bf:91:3f:6a:6d:dc:90:2c:86:59:a1:85:83:09:$         3c:0b:d8:3f:d8:ae:e0:3c:c2:69:82:60:34:28:dd:f2:38:df:$         f7:fc:f2:a2:0e:e7:f5:17:ba:16:4b:26:06:ad:96:77:43:39:$         02:0e:24:2b:1c:f6:8f:84:6d:0f:8d:99:7a:ad:c1:03:5d:da:$         5e:6b:0d:e4:74:95:dc:3b:0c:f8:cd:75:c5:52:9d:7f:50:38:$         57:12:76:19:af:41:ee:45:c5:2a:5f:07:fe:eb:d7:54:c9:82:$         17:e3:31:6a:17:ec:cf:fe:c9:b8:76:5b:37:d6:ec:c9:f4:c2:$         e4:a3:d6:79:a3:f6:1a:e5:ed:a0:a1:93:f2:3d:89:78:0d:cb:$         b3:5b:86:5e:cc:5f:cb:ce:70:ae:70:c9:7e:40:44:f7:66:2b:$         b4:1c:f3:f3$
+01/11/2019 14:07:24 [4869] peer certificate verify result: 19
+
+01/11/2019 14:07:24 [4869] ssl connect failed
+01/11/2019 14:07:24 [4864] rcv notice:1|SSL connect failed.
+01/11/2019 14:07:24 [4864] setup tunnel failed
+
+01/11/2019 14:07:24 [4864] kill_child:4869
+01/11/2019 14:07:24 [4864] tunnel start failed
+01/11/2019 14:07:24 [4864] rcv cmd:1 at state[0]
+01/11/2019 14:07:24 [4864] rcv cmd:2 at state[0]
+01/11/2019 14:07:24 [5002] begin cleanup linux...
+01/11/2019 14:07:24 [5002] clean up route...
+01/11/2019 14:07:24 [5002] truncate pppd.log
+01/11/2019 14:07:24 [5002] truncate forticlientsslvpn.log
+01/11/2019 14:07:24 [4869] FortiClient SSLVPN[4.0.2331] stopped

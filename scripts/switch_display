@@ -1,14 +1,22 @@
 #!/bin/bash
 #  This script uses xrandr to change monitor options
-HDMI=$(xrandr --listactivemonitors | grep 'DP-1-1' | wc -l )
-DVI=$(xrandr --listactivemonitors | grep 'DP-1-2' | wc -l )
-VGA=$(xrandr --listactivemonitors | grep 'DP-1-3' | wc -l )
-if [ $HDMI -eq 1 -a $VGA -eq 1 ]; then
-    xrandr --output DP-1-1 --left-of DP-1-3
-    xrandr --output eDP-1 --off
-elif [ $HDMI -eq 1 ]; then
-    xrandr --auto
-    xrandr --output eDP-1 --off
+LAPTOP=eDP1
+HDMI=DP1-1
+DVI=DP1-2
+VGA=DP1-3
+
+HAS_HDMI=$(xrandr --listactivemonitors | egrep 'DP1-1' | wc -l )
+HAS_DVI=$(xrandr --listactivemonitors | egrep 'DP1-2' | wc -l )
+HAS_VGA=$(xrandr --listactivemonitors | egrep 'DP1-3' | wc -l )
+echo $HAS_HDMI $HAS_DVI $HAS_VGA
+echo $HDMI $DVI $VGA $LAPTOP
+if [ $HAS_HDMI -eq 1 -a $HAS_VGA -eq 1 ]; then
+    xrandr --output $VGA --mode 1920x1200
+    xrandr --output $HDMI --mode 1920x1200 --primary --right-of $VGA
+    xrandr --output $LAPTOP --off
+elif [ $HAS_HDMI -eq 1 ]; then
+    xrandr --output $HDMI --mode 1920x1200 --primary
+    xrandr --output $LAPTOP --off
 else
-    xrandr --auto
+    xrandr --output $LAPTOP --primary --mode 1920x1080
 fi

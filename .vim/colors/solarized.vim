@@ -1115,3 +1115,8 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 "
 " vim:foldmethod=marker:foldlevel=0
 "}}}
+" Neomake
+exe "hi! NeoMakeErrorDefault"        .s:red .s:red .s:fmt_none
+exe "hi! NeoMakeWarningDefault"      .s:red .s:red .s:fmt_none
+exe "hi! NeomakeInformationDefault"  .s:red .s:red .s:fmt_none
+exe "hi! NeomakeMessageDefault"      .s:red .s:red .s:fmt_none

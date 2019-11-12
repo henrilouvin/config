@@ -1,15 +1,26 @@
 "  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'iCyMind/NeoSolarized'
 Plug 'neomake/neomake'
 call plug#end()
+let g:neomake_python_enabled_makers = ['pylint']
+" When writing a buffer (no delay).
+" call neomake#configure#automake('w')
+let g:neomake_error_sign = { 'texthl': 'NeoMakeErrorSign' }
+let g:neomake_warning_sign = { 'texthl': 'NeoMakeWarningSign' }
+let g:neomake_informational_sign = { 'texthl': 'NeomakeNeomakeInfoSign' }
+let g:neomake_message_sign = { 'texthl': 'NeomakeMessageSign' }
 
 " highlight common PEP errors
-highlight WhitespacePEP gui=underline cterm=underline ctermfg=red guifg=red ctermbg=red guibg=red
-match WhitespacePEP /\S\(=\|<\|>\|\!\|+\{-}\)=\S/
-match WhitespacePEP /\S=\S/
-" %s/\(\w\)\(=\|<\|>\|\!\|+\{-}\)=\(\w\)/\1 \2= \3/gc
-" 
+" highlight WhitespacePEP gui=underline cterm=underline ctermfg=red guifg=red ctermbg=red guibg=red
+" match WhitespacePEP /\S\(=\|<\|>\|\!\|+\{-}\)=\S/
+" match WhitespacePEP /\S=\S/
+command Fixspaces execute "%s/\\((.*\\)\\@<!\\(\\S\\)\\(=\\|<\\|>\\|\!\\|+\\{-}\\)\\(=\\|<\\|>\\)\\(\\S\\)\\(.*)\\)\\@!/\\2 \\3\\4 \\5/gc"
+command FixEOLspaces execute "%s/\\s\\+$//g | nohl"
+command Fixcommas execute "%s/\\(,\\|:\\)\\(\\S\\)/\\1 \\2/gc"
+command Fixstrings /\(\('\|"\)\(\s\{-}\)+\|+\(\s\{-}\)\('\|"\)\)
+"
 
 filetype plugin on
 set shellslash
@@ -57,7 +68,7 @@ autocmd BufWritePre [:] :wq
 
 map ' ' <Space>
 map Y y$
-nnoremap <C-H> :tabprevious<CR>
+" nnoremap <C-H> :tabprevious<CR>
 nnoremap <C-L> :tabnext<CR> 
 nnorema  <C-S-H> :tabm -1<CR>
 nnorema  <C-S-L> :tabm +1<CR>
@@ -68,10 +79,6 @@ nnorema  <C-S-Right> :tabm +1<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 command -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!
-
-" Highlight end of line whitespace
-highlight WhitespaceEOL ctermbg=red guibg=red gui=underline
-match WhitespaceEOL /\s\+$/
 
 " " LATEX
 " put \begin{} \end{} tags tags around the current word
@@ -92,8 +99,17 @@ au BufNewFile,BufRead *.md match DoubleSpace "[^ ]  [^ ]"
 syntax enable
 set background=dark
 "let g:solarized_termcolors=256
-colorscheme solarized
-source ~/.vimrc_py
+colorscheme NeoSolarized
+" source ~/.vimrc_py
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h set colorcolumn=80
+hi SpellBad cterm=reverse ctermfg=Red
+hi SpellCap cterm=reverse ctermfg=Blue
+
+" Highlight end of line whitespace
+highlight WhitespaceEOL ctermbg=red guibg=red gui=underline
+au BufNewFile,InsertLeave * match WhitespaceEOL /\s\+$\|\t\|\($\n\s*\)\+\%$/
+" au InsertLeave * match WhitespaceEOL /\s\+$/
+" au InsertLeave * match WhitespaceEOL /\t/
 
 
 " " vim airline

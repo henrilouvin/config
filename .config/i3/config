@@ -182,6 +182,7 @@ bar {
 bindsym $mod+F3 exec --no-startup-id amixer -q -D pulse sset Master 5%- #decrease sound volume
 bindsym $mod+F4 exec --no-startup-id amixer -q -D pulse sset Master 5%+ #increase sound volume
 bindsym $mod+F5 exec --no-startup-id amixer -q -D pulse sset Master toggle # mute/unmute
+bindsym $mod+F6 exec switch_audio # switch audio sink
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master 5%- #decrease sound volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+ #increase sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle # mute/unmute
@@ -198,4 +199,3 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id udiskie -s &
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/greg_and_mike.jpg &
 exec --no-startup-id switch_display &
-
