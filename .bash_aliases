@@ -6,9 +6,10 @@ alias lsl='ls -lh --color=auto'
 alias df='df -h'
 alias gp='gnuplot'
 alias py='python'
-alias grep='grep -rn --color=auto --exclude=tags'
+alias gr='grep -rn --color=auto --exclude={tags,.coverage,*.jar,swagger*} --exclude-dir={.git,.scannerwork}'
 alias vim='vim -p'
 alias nvim='nvim -p'
+alias bc='bc -l'
 
 #GIT
 alias gitk='gitk --all'
@@ -31,7 +32,9 @@ alias killt49='pgrep -f 'tripoli' |xargs kill -9'
 # LAZY ALIASES
 alias j='java'
 alias g='git'
+alias gl='git ls-files'
 alias v='nvim'
+alias vcal='nvim -c "Calendar -task -date_month_name"'
 alias ff='firefox'
 alias jjar='java -jar'
 
@@ -39,3 +42,8 @@ alias jjar='java -jar'
 alias dockerclean='docker image prune'
 alias dockercleanstopped='docker rm $(docker ps -a -q)'
 alias dockerlogin='docker login -u svom svomtest.svom.fr:5443 -p'
+
+# CEA
+alias daplxa='ssh -D 3129 hlouvin@daplxa.extra.cea.fr'
+alias drfewin='rdesktop -g 1920x1200 -PKD drfewin'
+

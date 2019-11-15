@@ -124,3 +124,19 @@ docker() {
 
 export LD_LIBRARY_PATH="$HOME/scripts:$OPENFIRE_HOME/lib:/opt/smack/libs:$JAVA_HOME/lib"
 export LD_LIBRARY_PATH="$HOME/projects/mordicus/utilities/install/lib:$HOME/projects/svom/mission-packets-generator/install/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/hdf5/serial:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/local/home/hlouvin/opt/moab/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/local/home/hlouvin/opt/moab/lib:$LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=/local/home/hlouvin/opt/moab/include:$CPLUS_INCLUDE_PATH
+export C_INCLUDE_PATH=/local/home/hlouvin/opt/moab/include:$C_INCLUDE_PATH
+if [ -z $PYTHONPATH ]
+then
+    export PYTHONPATH=/local/home/hlouvin/opt/moab/lib/python2.7/site-packages
+else
+    export PYTHONPATH=/local/home/hlouvin/opt/moab/lib/python2.7/site-packages:$PYTHONPATH
+fi
+
+# ROOT
+. ~/opt/root/bin/thisroot.sh
+
