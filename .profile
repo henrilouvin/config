@@ -21,7 +21,7 @@ export JAVA_HOME=/opt/jdk-9.0.1
 export OPENFIRE_HOME=/opt/openfire
 
 # PATH && LD_LIBRARY_PATH
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/scripts:$OPENFIRE_HOME/bin:$JAVA_HOME/bin:$HOME/go/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/scripts:$OPENFIRE_HOME/bin:$JAVA_HOME/bin:$HOME/go/bin:$HOME/opt/sonar-scanner-3.3.0.1492-linux/bin:$HOME/.cargo/bin:/usr/local/AstroDMx_Capture/bin/astrodmx_capture:$PATH"
 export LD_LIBRARY_PATH="$HOME/scripts:$OPENFIRE_HOME/lib:/opt/smack/libs:$JAVA_HOME/lib:$LD_LIBRARY_PATH"
 export CLASSPATH="/usr/share/java:/opt/jxmpp:/opt/smack/libs"
 
@@ -32,4 +32,5 @@ export LD_LIBRARY_PATH="$ROOT_DIR/lib:$ROOT_DIR/include:$PATH"
 
 # TERMINAL
 export TERMINAL="tilix"
-export EDITOR="nvim"
+export VISUAL=nvim
+export EDITOR="$VISUAL"
