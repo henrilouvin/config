@@ -20,7 +20,7 @@ let g:neomake_message_sign = { 'texthl': 'NeomakeMessageSign' }
 " highlight WhitespacePEP gui=underline cterm=underline ctermfg=red guifg=red ctermbg=red guibg=red
 " match WhitespacePEP /\S\(=\|<\|>\|\!\|+\{-}\)=\S/
 " match WhitespacePEP /\S=\S/
-command Fixlogicals execute "%s/\\(\\S\\)\\(==\\|+=\\|!=\\|>=\\|<=\\|-=\\|=\\|<\\|>\\|+\\)\\(\\S\\)/\\1 \\2 \\3/gc"
+command Fixlogicals execute "%s/\\(\\S\\)\\(==\\|+=\\|!=\\|>=\\|<=\\|-=\\|=\\|<\\|>\\)\\(\\S\\)/\\1 \\2 \\3/gc"
 command FixLog execute "%s/\\''+\(.*\)putfile+'\\''/\\'%s\\'', \1putfile/gc"
 command FixEOL execute "silent! %s/\\s\\+$//g" <bar> "nohl"
 command Fixcommas execute "%s/\\(,\\|:\\)\\(\\S\\)/\\1 \\2/gc"

@@ -137,6 +137,3 @@ else
     export PYTHONPATH=/local/home/hlouvin/opt/moab/lib/python2.7/site-packages:$PYTHONPATH
 fi
 
-# ROOT
-. ~/opt/root/bin/thisroot.sh
-
