@@ -1,5 +1,5 @@
 CURRENT_SINK=$(pacmd list-sinks | grep "\* index:" | awk '{print $3}')
-NEW_SINK=$(pacmd list-sinks | grep "  index:" | awk '{print $2}')
+NEW_SINK=$(pacmd list-sinks | grep "  index:" | awk 'END{print $2}')
 
 pacmd list-sink-inputs | grep index | awk '{print $2}' | while read INPUT
 do
